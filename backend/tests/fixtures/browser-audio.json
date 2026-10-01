@@ -1,0 +1,27 @@
+{
+  "source": "Web Audio oscillator through actual app RecordingController and Chromium MediaRecorder",
+  "private_content": false,
+  "clips": [
+    {
+      "name": "short",
+      "seconds": 2.0019000000953673,
+      "type": "audio/webm;codecs=opus",
+      "size": 31089,
+      "filename": "chromium-short.webm"
+    },
+    {
+      "name": "boundary",
+      "seconds": 30.00310000014305,
+      "type": "audio/webm;codecs=opus",
+      "size": 482659,
+      "filename": "chromium-boundary.webm"
+    },
+    {
+      "name": "valid",
+      "seconds": 31.202099999904632,
+      "type": "audio/webm;codecs=opus",
+      "size": 501995,
+      "filename": "chromium-valid.webm"
+    }
+  ]
+}

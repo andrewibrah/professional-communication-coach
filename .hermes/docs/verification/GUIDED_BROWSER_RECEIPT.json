@@ -1,0 +1,13 @@
+{
+  "pass": false,
+  "error": "Error: Voice connection timed out. Reconnect explicitly to try again.",
+  "localState": "closed",
+  "otherState": "connecting",
+  "localIce": "closed",
+  "otherIce": "checking",
+  "localGathering": "complete",
+  "otherGathering": "complete",
+  "localCandidateCount": 1,
+  "otherCandidateCount": 1,
+  "cleanupReleased": true
+}

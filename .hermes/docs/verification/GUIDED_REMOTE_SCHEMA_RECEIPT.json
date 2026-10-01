@@ -1,0 +1,14 @@
+{
+  "scope": "authorized additive development schema via authenticated MCP; no live-account tests",
+  "project_url": "https://qpheitaamyzcekzvbcox.supabase.co",
+  "migration": {
+    "version": "20261001064804",
+    "name": "speechclear_guided_voice"
+  },
+  "source_sha256": "6beedd141a7f7bbe9d08d1b1861fcf23b0edcb65b079f11f25288b448ff694de",
+  "rpc_body_hash_matches_source": true,
+  "service_only_rpc_verified": true,
+  "owner_readonly_tables_verified": 3,
+  "owner_select_policies_verified": 3,
+  "private_operational_tables_verified": 4
+}
