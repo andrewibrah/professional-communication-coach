@@ -6,7 +6,11 @@ Professional communication practice built with React, TypeScript, Vite, FastAPI,
 
 The GitHub Actions workflow in [`.github/workflows/pages.yml`](.github/workflows/pages.yml) installs dependencies, runs frontend tests, builds with the repository's Pages base path, and deploys **only `frontend/dist`** on pushes to `main` or manual dispatch. In GitHub repository settings, Pages must use **GitHub Actions** as its build source.
 
-**This deployment is a frontend-only preview.** GitHub Pages cannot run FastAPI or proxy `/api`. Without a separately hosted HTTPS API, the interface is explorable but authentication, saved practice, uploads, and AI coaching are unavailable and fail closed. No mock accounts or fabricated coaching results are supplied. A successful Pages deployment is not production or live-provider acceptance.
+**This deployment hosts the frontend and connects directly to Supabase Auth.** Public repository variables `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` are embedded at build time, so sign-in does not depend on FastAPI. Only `sb_publishable_*` browser keys are accepted by the static fallback; never configure a secret/service-role key. Local development still prefers `/api/v1/config` when available.
+
+GitHub Pages cannot run FastAPI or proxy `/api`. Saved practice, uploads, and AI coaching remain unavailable without a separately hosted HTTPS API. No mock accounts or fabricated coaching results are supplied. A successful Pages deployment is not production or live-provider acceptance.
+
+In Supabase Authentication URL Configuration, allow the exact redirect URL `https://andrewibrah.github.io/professional-communication-coach/` while preserving local redirects. The frontend now requests this repository-aware URL for signup confirmation, password recovery, and sign-in emails. If it is not allowed, Supabase can fall back to the existing Site URL; changing the frontend alone does not modify project settings. Existing email/password sign-in does not need an email redirect. Actual account and email-delivery acceptance remains user-tested.
 
 Local build matching a project Pages URL:
 

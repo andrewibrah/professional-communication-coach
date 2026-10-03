@@ -38,6 +38,8 @@ jobs:
         # Trusted configure-pages output, passed via env rather than shell interpolation.
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: npm run build -- --base "${PAGES_BASE_PATH}/"
       - name: Upload static frontend only
         uses: actions/upload-pages-artifact@v3
